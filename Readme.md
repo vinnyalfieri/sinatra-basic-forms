@@ -1,8 +1,3 @@
----
-tags: forms, sinatra
-languages: ruby, html
----
-
 # Basic Forms!
 
 ## Deliverables
