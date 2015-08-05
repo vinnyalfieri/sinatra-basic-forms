@@ -9,4 +9,6 @@ ActiveRecord::Base.establish_connection(
   :database => "db/songs-#{ENV['SINATRA_ENV']}.db"
 )
 
+ActiveRecord::Base.logger = nil
+
 require_all 'app'

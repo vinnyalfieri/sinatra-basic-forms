@@ -1,17 +1,15 @@
----
-tags: forms, sinatra
-languages: ruby, html
----
-
 # Basic Forms!
 
 ## Deliverables
 
 Fork this repository. Deliver your work in the master branch.
 
-## Instructions
+## Objectives
 
-Create an edit form for the songs resource, utilize the params hash.
+1. Build out basic edit/update functionality for the songs resource
+2. Create a form that produces a well-structured params hash for updating songs using mass-assignment
+
+## Instructions
 
 1) Bundle gems
 
@@ -20,10 +18,19 @@ Create an edit form for the songs resource, utilize the params hash.
 2) Create the database schema
 
 `rake db:migrate`
+`rake db:migrate SINATRA_ENV=test`
 
 3) Seed the database with data
 
 `rake db:seed`
+
+4) Run `shotgun` and open [localhost:9393](http://localhost:9393/) in your browser. Click around and see what has already been built out.
+
+Your objective for this lab will be to make it possible for users to edit songs. You'll create the necessary routes and a form to make this feature work.
+
+Since the test suite for this uses capybara to recreate the user flow (visit the song show page, click on the edit link, fill in and submit the form), you'll have to build out the functionality with that order in mind if you want your failures to go in a logical order. 
+
+The following steps provide an overview of what you'll need to build:
 
 ### Create the edit route
 
@@ -44,4 +51,4 @@ Make sure that the 'action' attribute of your form points to the correct route, 
 ### Add the edit link
 
 Add a link on each song show page that directs users to the edit view
-and fix the songs!.
+and fix the songs!
