@@ -1,4 +1,4 @@
-# Simple Forms Review Rubric
+# Guide to Solving and Reviewing Sinatra Basic Forms
 
 ## Navigate first
 - Start up the server, see what we have at hand
