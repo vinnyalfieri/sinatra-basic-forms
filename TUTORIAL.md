@@ -35,20 +35,20 @@
 - Now the page will render when we go to that path. Currently, the `edit.html.erb` template is empty. How should we fill in the data? Let's look at the error message. It looks a lot like there's a missing form, right? Let's add in the form.
 
     ```ruby
-    <form action="/songs/:id" method="post">
-      <label for="song-title">Song Title</label>
-      <input type="text" name="song[title]" value="<%= @song.title %>" id="song-title"><br>
-      <label for="artist-name">Artist Name</label>
-      <input type="text" name="song[artist]" value="<%= @song.title %>" id="artist-name"><br>
-      <label for="album-name">Album Name</label>
-      <input type="text" name="song[album]" value="<%= @song.title %>" id="album-name"><br>
-      <label for="genre-name">Genre Name</label>
-      <input type="text" name="song[genre]" value="<%= @song.title %>" id="genre-name"><br>
-      <label for="song-length">Song Length</label>
-      <input type="text" name="song[length]" value="<%= @song.title %>" id="song-length"><br>
+    <form action="/songs/<%=@song.id %>" method="post">
+  <label for="song-title">Song Title</label>
+  <input type="text" name="song[title]" value="<%= @song.title %>" id="song-title"><br>
+  <label for="artist-name">Artist Name</label>
+  <input type="text" name="song[artist]" value="<%= @song.artist %>" id="artist-name"><br>
+  <label for="album-name">Album Name</label>
+  <input type="text" name="song[album]" value="<%= @song.album %>" id="album-name"><br>
+  <label for="genre-name">Genre Name</label>
+  <input type="text" name="song[genre]" value="<%= @song.genre %>" id="genre-name"><br>
+  <label for="song-length">Song Length</label>
+  <input type="text" name="song[length]" value="<%= @song.length %>" id="song-length"><br>
 
-      <button type="submit">Save Changes</button>
-    </form>
+  <button type="submit">Save Changes</button>
+</form>
     ```
 
 - Now the first test should be passing!
